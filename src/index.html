@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>webpack demo</title>
+    <title>Leaderboard</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <header>
+        <h1>Leaderboard</h1>
+    </header>
+    <main>
+        <section id="recent-scores-section">
+            <h2>Recent scores</h2>
+            <ul id="score-list">
+                <li>Name: 100</li>
+                <li>Name: 20</li>
+                <li>Name: 70</li>
+            </ul>
+        </section>
+        <section id="add-score-section">
+            <h2>Add your score</h2>
+            <form id="score-form">
+                <input type="text" name="name" id="name">
+                <input type="number" name="score" id="score">
+            </form>
+        </section>
+    </main>
+    
 </body>
 </html>
