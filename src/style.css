@@ -4,5 +4,15 @@ body {
 
 main {
   display: flex;
+  gap: 32px;
+}
+
+#recent-scores-header-section {
+  display: flex;
   gap: 16px;
+  align-items: center;
+}
+
+#refresh-button {
+  height: min-content;
 }
