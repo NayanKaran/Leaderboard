@@ -1,3 +1,39 @@
 body {
-    background-color: bisque;
+  margin: 16px;
+}
+
+main {
+  margin-left: 64px;
+  display: flex;
+  gap: 32px;
+}
+
+#recent-scores-header-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#refresh-button {
+  height: min-content;
+}
+
+#score-list {
+  list-style-type: none;
+  border: 2px solid black;
+  padding: 0;
+}
+
+#score-list > li {
+  padding: 4px;
+}
+
+#score-list > li:nth-child(odd) {
+  padding: 4px;
+  background-color: lightgray;
+}
+
+#score-form > input[type=submit] {
+  display: flex;
+  margin-left: auto;
 }
