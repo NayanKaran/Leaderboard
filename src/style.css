@@ -1,5 +1,17 @@
 body {
-  margin: 16px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: darkgreen;
+}
+
+header {
+  padding: 16px;
+  padding-left: 32px;
+  margin-bottom: 64px;
+  font-size: x-large;
+  background: green;
+  color: white;
 }
 
 .loading {
@@ -11,9 +23,26 @@ body {
 }
 
 main {
-  margin-left: 64px;
   display: flex;
-  gap: 32px;
+  justify-content: center;
+  gap: 64px;
+  margin: 64px;
+}
+
+input[type=submit] {
+  width: auto;
+  color: white;
+  background: green;
+  border: 0;
+  padding: 16px;
+  margin: 16px 0 0 0;
+}
+
+input[type=submit]:disabled {
+  color: black;
+  background: #d7ffd7;
+  padding: 16px;
+  margin: 16px 0 0 0;
 }
 
 #recent-scores-header-section {
@@ -22,26 +51,79 @@ main {
   align-items: center;
 }
 
-#refresh-button {
-  height: min-content;
-}
-
 #score-list {
   list-style-type: none;
-  border: 2px solid black;
   padding: 0;
+  margin: 16px 0 0 0;
 }
 
 #score-list > li {
-  padding: 4px;
+  padding: 16px;
 }
 
 #score-list > li:nth-child(odd) {
-  padding: 4px;
-  background-color: lightgray;
+  background-color: #d7ffd7;
 }
 
 #score-form > input[type=submit] {
   display: flex;
   margin-left: auto;
+}
+
+h2 {
+  margin: 0;
+}
+
+#recent-scores-section {
+  background-color: white;
+  padding: 16px;
+  min-height: 94px;
+}
+
+#add-score-section {
+  background: white;
+  padding: 16px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #d7ffd7;
+  border: 0;
+  padding: 16px;
+  margin: 16px 0 0 0;
+}
+
+section {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: min-content;
+  width: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#refresh-button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-image: url(./images/refresh_icon.svg);
+}
+
+#refresh-button:disabled {
+  animation-name: spin;
+  animation-duration: 2s;
+  cursor: initial;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
