@@ -1,5 +1,5 @@
 import ScoreBoard from './scoreboard.js';
-import displayUI from './initializeUI.js'
+import displayUI from './initializeUI.js';
 
 const scoreList = {};
 
