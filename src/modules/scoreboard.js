@@ -1,5 +1,5 @@
-import { getGameId, getUsers, postUser } from "./gameapi.js";
-import { showScoresToUI, addScoreToUI } from "./scoreboardUI.js";
+import { getGameId, getUsers, postUser } from './gameapi.js';
+import { showScoresToUI, addScoreToUI } from './scoreboardUI.js';
 
 export default class ScoreBoard {
   constructor(gameId, scoreList) {
@@ -9,7 +9,7 @@ export default class ScoreBoard {
 
   static createScoreBoard = async (gameName) => {
     const gameId = await getGameId(gameName);
-    const {data} = await getUsers(gameId);
+    const { data } = await getUsers(gameId);
     const scoreList = data.result;
     showScoresToUI(scoreList);
     return new ScoreBoard(gameId, scoreList);
@@ -28,7 +28,7 @@ export default class ScoreBoard {
   };
 
   syncScoreBoard = async () => {
-    const {data} = await getUsers(this.gameId);
+    const { data } = await getUsers(this.gameId);
     this.scoreList = data.result;
     showScoresToUI(this.scoreList);
   };
