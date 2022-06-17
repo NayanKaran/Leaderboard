@@ -1,10 +1,12 @@
 import scoreList from './scorelist.js';
 
 const addScoreForm = document.querySelector('#score-form');
-addScoreForm.addEventListener('submit', (event) => {
+addScoreForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  scoreList.list.addScore(
+  addScoreForm.lastElementChild.disabled = true;
+  await scoreList.list.addScore(
     addScoreForm.elements.name.value,
     addScoreForm.elements.score.value,
   );
+  addScoreForm.lastElementChild.disabled = false;
 });
