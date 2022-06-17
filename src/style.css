@@ -6,12 +6,16 @@ body {
 }
 
 header {
-  padding: 16px;
-  padding-left: 32px;
-  margin-bottom: 64px;
   font-size: x-large;
   background: green;
   color: white;
+}
+
+h1 {
+  max-width: 1024px;
+  padding: 32px 64px;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 .loading {
@@ -26,7 +30,10 @@ main {
   display: flex;
   justify-content: center;
   gap: 64px;
-  margin: 64px;
+  padding: 64px;
+  margin: auto;
+  max-width: 1024px;
+  box-sizing: border-box;
 }
 
 input[type=submit] {
@@ -133,8 +140,8 @@ section {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    gap: 64px;
-    margin: 32px;
+    gap: 32px;
+    padding: 32px;
   }
 
   section {
