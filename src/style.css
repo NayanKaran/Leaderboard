@@ -127,3 +127,27 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 64px;
+    margin: 32px;
+  }
+
+  section {
+    box-sizing: border-box;
+  }
+
+  header {
+    font-size: large;
+    text-align: center;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    justify-content: center;
+  }
+}
